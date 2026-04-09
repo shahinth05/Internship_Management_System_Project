@@ -14,7 +14,7 @@
 <br />
 
 ### Demo Screeshots
-<img width="1919" height="880" alt="Screenshot 2026-04-09 105144" src="https://github.com/user-attachments/assets/987a6d28-a7d7-432a-a42b-08390db2ef76" />
+<img width="1918" height="879" alt="desktop-demo" src="https://github.com/user-attachments/assets/5c0bda7d-8d60-4791-bde3-d9807a244ad3" />
 
 ### Prerequisites
 
