@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Management System</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Internship Management System</h1>
+    <nav>
+      <button onclick="showPage('login')">Login</button>
+      <button onclick="showPage('register')">Register</button>
+    </nav>
+  </header>
+  
+  <main>
+   <section id="register" class="page hidden">
+  <h2>Register</h2>
+  <form id="registerForm">
+    <input type="text" id="regName" placeholder="Full Name" required />
+    <input type="email" id="regEmail" placeholder="Email" required />
+    <input type="password" id="regPassword" placeholder="Password" required />
+    <label>
+    <input type="checkbox" id="showRegPassword"/>
+    Show Password
+    </label>
+    <button type="submit">Register</button>
+  </form>
+</section>
+
+<section id="login" class="page hidden">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required />
+    <input type="password" id="loginPassword" placeholder="Password" required />
+    <label>
+      <input type="checkbox" id="showLoginPassword"/>
+      Show Password
+    </label>
+    <button type="submit">Login</button>
+  </form>
+</section>
+
+    <section id="dashboard" class="page hidden">
+      <h2>Dashboard</h2>
+      <div class="dashboard-header">
+        <button onclick="showPage('taskSubmission')">Submit Task</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+      <div>
+        <h3>Your Submissions</h3>
+       <table id="submissionsTable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th class="action-cell">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Rows will be dynamically inserted here -->
+  </tbody>
+</table>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="taskSubmission" class="page hidden">
+      <h2>Task / Project Submission</h2>
+      <form id="taskForm">
+        <input type="text" id="taskTitle" placeholder="Task Title" required />
+        <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="showPage('dashboard')">Cancel</button>
+      </form>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

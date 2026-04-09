@@ -1,0 +1,377 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling with background image */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #fafbfb); /* fallback background */
+  background-image: url('image2.jpg'); /* initial background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  line-height: 1.6;
+  color: #faf9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-image 1s ease-in-out; /* smooth transition */
+}
+
+/* Header Styling - Shiny and Glowing */
+header {
+  background: linear-gradient(90deg, #e100fa, #7873f5);
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 0 0 10px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  /* Glowing effect */
+  box-shadow: 0 0 20px #e100fa, 0 0 30px #7873f5 inset;
+  transition: all 0.3s ease;
+}
+header:hover {
+  box-shadow: 0 0 30px #e100fa, 0 0 40px #7873f5 inset;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Style the label to align checkbox and text properly */
+label {
+  display: flex;
+  color: #000000;
+  align-items: center;
+  gap: 8px; /* space between checkbox and text */
+  margin-bottom: 15px; /* spacing below the label */
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Optional: style the checkbox for better appearance */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Nav Buttons with Shine & Glow */
+nav button {
+  background: #fff;
+  color: #182848;
+  border: none;
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+nav button:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #e100fa, 0 0 20px #007bff inset;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Page Sections */
+.page {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Forms Styling with Glow */
+form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+form:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 1.2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+  border-color: #e100fa;
+  box-shadow: 0 0 8px #e100fa;
+  outline: none;
+}
+
+/* Button Styling for Forms - Glowing */
+form button {
+  background: #e100fa;
+  color: #fcfcfc;
+  border: none;
+  padding: 0.75rem 2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+form button:hover {
+  background: #e100fa;
+  box-shadow: 0 0 20px #e100fa, 0 0 25px #7873f5 inset;
+  transform: translateY(-2px);
+}
+
+/* Dashboard Header Buttons with Glowing Effect */
+.dashboard-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.dashboard-header button {
+  background: #00d2ff;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+.dashboard-header button:hover {
+  background: #009adf;
+  box-shadow: 0 0 15px #00d2ff, 0 0 20px #00d2ff inset;
+  transform: translateY(-2px);
+}
+
+/* Style for status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+/* Pending status - orange */
+.status-pending {
+  background-color: #ff9800;
+}
+.status-pending:hover {
+  background-color: #fb8c00;
+}
+
+/* Submitted status - green */
+.status-submitted {
+  background-color: #4caf50;
+}
+.status-submitted:hover {
+  background-color: #43a047;
+}
+
+/* Styles for delete label and button as before */
+.delete-label {
+  display: inline-block;
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.delete-label:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+.delete-btn {
+  background-color: transparent;
+  color: #ff4d4d;
+  border: 0.2px solid #ff4d4d;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add hover effects to make it more attractive */
+.delete-btn:hover {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border-color: #cc0000;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styling with Shine & Glow */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+table:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+thead {
+  background-color: #bc03f4;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+th {
+  position: relative;
+}
+td {
+  vertical-align: top;
+  color: #000000;
+}
+
+/* Card Containers for Modules with Glowing Borders */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  border-color: #bc03f4;
+  transform: translateY(-5px);
+}
+
+/* Custom Scrollbar for Sleek UI */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Responsive Design with Gradient & Glow Elements */
+@media(max-width: 1024px) {
+  body { font-size: 15px; }
+  header { padding: 1.2rem 1rem; }
+}
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  main {
+    padding: 2rem 1rem;
+  }
+  table, form { width: 100%; }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dashboard-header button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Utility Classes for Flex & Centering */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+
+/* FadeIn Animation for Smoothness */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
